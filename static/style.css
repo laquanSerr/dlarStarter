@@ -1,0 +1,25 @@
+body {
+  font-family: Arial;
+  margin: 20px;
+  background: #f4f4f4;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1em;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.completed {
+  background-color: #f0f0f0;
+  text-decoration: line-through;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DLAR Agreement Submission</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/static/script.js" defer></script> <!-- ✅ Ensure this path matches server -->
+</head>
+<body>
+  <h1>DLAR DAD Submission</h1>
+
+  <form action="/submit" method="post">
+    <label for="dad">Enter your agreement:</label><br>
+    <textarea id="dad" name="dad" rows="10" cols="50" required></textarea><br>
+    <button type="submit">Submit Agreement</button>
+  </form>
+
+  <hr>
+
+  <h2>Submitted Contracts</h2>
+  <div id="contracts">
+    Loading...
+  </div>
+</body>
+</html>

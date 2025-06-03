@@ -1,0 +1,15 @@
+ fetch("/contracts")
+      .then(res => res.json())
+      .then(data => {
+        const list = document.getElementById("contractList");
+        list.innerHTML = "";
+        data.forEach((c, idx) => {
+          const item = document.createElement("li");
+          item.innerText = `#${idx+1} - ${c.status.toUpperCase()} - ${c.dad.slice(0, 30)}...`;
+          list.appendChild(item);
+       });
+      });
+
+
+
+      
