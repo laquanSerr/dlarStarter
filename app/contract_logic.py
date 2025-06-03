@@ -1,42 +1,48 @@
 import json
 import os
 
-
-
 DATA_PATH = "contracts/saved_dads.json"
 
+
 def load_contracts():
-    # Load contract data from JSON file
     if os.path.exists(DATA_PATH):
         with open(DATA_PATH, "r") as f:
             return json.load(f)
     return []
+
+
 def save_contracts(contracts):
     with open(DATA_PATH, "w") as f:
         json.dump(contracts, f, indent=2)
 
+
+def validate_contract(dad_text):
+    if not dad_text or len(dad_text.strip()) == 0:
+        raise ValueError("Contract terms cannot be empty.")
+    if len(dad_text) > 5000:
+        raise ValueError("Contract terms exceed maximum allowed length.")
+    # Add more validation rules as needed
+
+
 def add_contract(dad_text):
-    #Add a new contract to the list
+    validate_contract(dad_text)
     contracts = load_contracts()
+
+    # Optional: Check for duplicates
+    for c in contracts:
+        if c.get("dad") == dad_text:
+            raise ValueError("This contract already exists.")
+
     record = {"dad": dad_text, "status": "submitted"}
     contracts.append(record)
     save_contracts(contracts)
 
+
 def complete_contract(index):
-    #Mark a contract as completed
     contracts = load_contracts()
-    if 0 <= index < len(contracts):
-        contracts[index]["status"] = "completed"
-        save_contracts(contracts)
-def validate_contract(dad_text):
-    errors = []
-    if len(dad_text.strip()) < 20:
-        errors.append("Contract is too short.")
-    if "DLAR" not in dad_text:
-        errors.append("Contract must mention DLAR tokens.")
-    if not any(month in dad_text for month in [
-        "January", "February", "March", "April", "May", "June", "July", "August",
-        "September", "October", "November", "December"
-    ]):
-        errors.append("Contract must include a delivery of deadline date.")
-    return errors
+    if index < 0 or index >= len(contracts):
+        raise IndexError("Contract index out of range.")
+    if contracts[index]["status"] == "completed":
+        raise ValueError("Contract is already completed.")
+    contracts[index]["status"] = "completed"
+    save_contracts(contracts)

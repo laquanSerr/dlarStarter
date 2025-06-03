@@ -52,5 +52,31 @@ window.addEventListener("DOMContentLoaded", () => {
   } else {
     window.location.reload();
   }
+  document.getElementById('contractForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const contractName = document.getElementById('contractName').value;
+    const contractDetails = document.getElementById('contractDetails').value;
+
+    fetch('/submit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            contract_name: contractName,
+            contract_details: contractDetails
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Handle the response from the server
+        alert(data.result);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+
 });
 });

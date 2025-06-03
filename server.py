@@ -7,6 +7,22 @@ import os
 from app.contract_logic import load_contracts, add_contract, complete_contract
 from app.contract_logic import validate_contract
 
+from flask import Flask, request, jsonify
+from app.contract_logic import add_contract
+
+app = Flask(__name__)
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    data = request.get_json()
+    contract_name = data.get('contract_name')
+    contract_details = data.get('contract_details')
+
+    # Process the contract using a function from contract_logic.py
+    result = add_contract(contract_name, contract_details)
+
+    return jsonify({'status': 'success', 'result': result})
+
 DATA_PATH = "contracts/saved_dads.json"
 
 
