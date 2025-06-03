@@ -1,82 +1,110 @@
-// This script runs after the DOM is fully loaded
-window.addEventListener("DOMContentLoaded", () => {
-  fetch("/contracts")
-    .then(res => res.json())
-    .then(contracts => {
-      const container = document.getElementById("contracts");
-      container.innerHTML = ""; // Clear the "Loading..." text
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contract-form");
+  const feedback = document.getElementById("feedback");
+  const container = document.getElementById("contracts");
+
+  // 🔄 Load contracts on page load
+  async function loadContracts() {
+    try {
+      const res = await fetch("/contracts");
+      const contracts = await res.json();
+      container.innerHTML = ""; // Clear previous content
 
       if (contracts.length === 0) {
         container.textContent = "No contracts submitted yet.";
         return;
       }
 
-      // Loop through each contract and create a display block
       contracts.forEach((contract, index) => {
         const div = document.createElement("div");
-        div.className = "contract";
+        div.classList.add("contract-entry");
 
-        div.innerHTML = `
+        const html = `
           <p><strong>DAD:</strong> ${contract.dad}</p>
-          <p>Status: ${contract.status}</p>
-          ${contract.status === "submitted" ? `
-            <form action="/complete" method="post">
-              <input type="hidden" name="index" value="${index}">
-              <button type="submit">Mark as Completed</button>
-            </form>
-          ` : ""}
-          <hr>
+          <p><strong>Status:</strong> ${contract.status}</p>
         `;
+        div.innerHTML = html; // Set before button to avoid overwrite
+
+        // ✅ Only show button if status is "submitted"
+        if (contract.status === "submitted") {
+          const button = document.createElement("button");
+          button.textContent = "Mark as Completed";
+          button.classList.add("complete-btn");
+          button.dataset.index = index;
+
+          button.addEventListener("click", async () => {
+            try {
+              const res = await fetch("/complete", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ index })
+              });
+
+              const result = await res.json();
+              if (res.ok) {
+                alert(result.message);
+                window.location.reload();
+              } else {
+                alert("Error: " + result.message);
+              }
+            } catch (err) {
+              console.error("Error completing contract:", err);
+              alert("Unexpected error.");
+            }
+          });
+
+          div.appendChild(button);
+        }
+
         container.appendChild(div);
       });
-    })
-    .catch(err => {
-      console.error("Error loading contracts:", err);
-      const container = document.getElementById("contracts");
+    } catch (err) {
+      console.error("Failed to load contracts:", err);
       container.textContent = "Failed to load contracts.";
-    });
-  document.getElementById("dad-form").addEventListener("submit", async function (e) {
-  e.preventDefault();
-
-  const form = e.target;
-  const data = new FormData(form);
-  const response = await fetch("/submit", {
-    method: "POST",
-    body: new URLSearchParams(data),
-  });
-
-  if (response.status === 400) {
-    const result = await response.json();
-    document.getElementById("feedback").textContent = "Error: " + result.errors.join(" ");
-    document.getElementById("feedback").style.color = "red";
-  } else {
-    window.location.reload();
+    }
   }
-  document.getElementById('contractForm').addEventListener('submit', function(e) {
-    e.preventDefault();
 
-    const contractName = document.getElementById('contractName').value;
-    const contractDetails = document.getElementById('contractDetails').value;
+  // 📤 Submit new contract
+ form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const dadText = document.getElementById("dad-input").value.trim();
 
-    fetch('/submit', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            contract_name: contractName,
-            contract_details: contractDetails
-        })
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Handle the response from the server
-        alert(data.result);
-    })
-    .catch(error => {
-        console.error('Error:', error);
+  // Live validation
+  if (!dadText) {
+    feedback.textContent = "❌ Please enter a DAD.";
+    return;
+  }
+  if (dadText.length > 5000) {
+    feedback.textContent = "❌ DAD exceeds max length (5000 characters).";
+    return;
+  }
+
+  try {
+    const res = await fetch("/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ dad: dadText })
     });
+
+    const result = await res.json();
+    if (res.ok) {
+      feedback.textContent = "✅ Contract submitted.";
+      form.reset();
+      loadContracts();
+    } else {
+      feedback.textContent = `❌ ${result.message || "Submission failed."}`;
+    }
+  } catch (err) {
+    console.error("Submit error:", err);
+    feedback.textContent = "❌ Network or server error.";
+  }
 });
 
+
+  loadContracts(); // Initial load
 });
-});
+
+
