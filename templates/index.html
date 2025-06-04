@@ -10,34 +10,31 @@
     <h1>DLAR DAD Submission</h1>
 
 
-    <form action="/create" method="POST">
-    <label>Select Your Role:</label>
-    <select name="created_by">
+        <!-- index.html -->
+    <form id="contract-form">
+        <select name="created_by">
         <option value="PartyA">Party A</option>
         <option value="PartyB">Party B</option>
-    </select>
-    <br>
-    <textarea name="dad_text" placeholder="Enter contract details..."></textarea>
-    <br>
-    <button type="submit">Create Contract</button>
-</form>
+      </select>
+      <input type="hidden" name="for_party" value="PartyB">
+      <textarea name="dad_text" placeholder="Enter contract details..."></textarea>
 
-
+      <button type="submit">Create Contract</button>
 
 
   <hr>
 
   <h3>Submitted Contracts</h3>
-<ul>
-    {% for contract in contracts %}
-        <li>
-            Contract ID: {{ contract.id }} -
-            <a href="/summary/{{ contract.id }}">View Summary</a>
-        </li>
-    {% else %}
-        <li>No contracts submitted yet.</li>
-    {% endfor %}
-</ul>
+    <ul>
+        {% for contract in contracts %}
+            <li>
+                Contract ID: {{ contract.id }} -
+                <a href="/summary/{{ contract.id }}">View Summary</a>
+            </li>
+        {% else %}
+            <li>No contracts submitted yet.</li>
+        {% endfor %}
+    </ul>
 
 </body>
 </html>

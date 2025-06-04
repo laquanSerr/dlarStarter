@@ -15,5 +15,23 @@
             <li>No contracts found.</li>
         {% endfor %}
     </ul>
+    <ul id="contract-list"></ul>
+        <script>
+        fetch("/contracts")
+          .then(res => res.json())
+          .then(data => {
+            const list = document.getElementById("contract-list");
+            if (data.length === 0) {
+              list.innerHTML = "<li>No contracts found.</li>";
+            } else {
+              data.forEach(contract => {
+                const li = document.createElement("li");
+                li.textContent = `Created by ${contract.created_by} → ${contract.for_party}: ${contract.dad_text}`;
+                list.appendChild(li);
+              });
+            }
+          });
+        </script>
+
 </body>
 </html>

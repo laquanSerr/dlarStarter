@@ -2,15 +2,18 @@ import json
 import os
 import uuid
 
-DATA_PATH = "contracts/saved_dads.json"
-
+# Directory for individual contract files
 CONTRACTS_FOLDER = "artifacts/contracts"
 
+# Ensure the directory exists
+if not os.path.exists(CONTRACTS_FOLDER):
+    os.makedirs(CONTRACTS_FOLDER)
+
+# -------------------------------
+# Function: Get all saved contracts
+# -------------------------------
 def get_contracts():
     contracts = []
-    if not os.path.exists(CONTRACTS_FOLDER):
-        os.makedirs(CONTRACTS_FOLDER)
-
     for filename in os.listdir(CONTRACTS_FOLDER):
         if filename.endswith(".json"):
             filepath = os.path.join(CONTRACTS_FOLDER, filename)
@@ -20,72 +23,56 @@ def get_contracts():
                 contracts.append(contract)
     return contracts
 
-def create_contract(data):
-    contract_id = str(uuid.uuid4())
-    contract = {
-        "id": contract_id,
-        "created_by": data.get("created_by", "PartyA"),
-        "for_party" : data.get("for_party", "PartyB"),
-        "terms": data.get("terms", ""),
-        "status": "draft"
-    }
-    return contract_id, contract
-
-def load_contracts():
-    if os.path.exists(DATA_PATH):
-        with open(DATA_PATH, "r") as f:
-            return json.load(f)
-    return []
-
-
-def save_contracts(contracts):
-    with open(DATA_PATH, "w") as f:
-        json.dump(contracts, f, indent=2)
-
-
+# -------------------------------
+# Function: Validate contract text
+# -------------------------------
 def validate_contract(dad_text):
     if not isinstance(dad_text, str):
-        raise TypeError("Contract text must be a string")
-    if not dad_text or len(dad_text.strip()) == 0:
+        raise TypeError("Contract text must be a string.")
+    if not dad_text.strip():
         raise ValueError("Contract terms cannot be empty.")
     if len(dad_text) > 5000:
         raise ValueError("Contract terms exceed maximum allowed length.")
-    # Add more validation rules as needed
 
-
-def add_contract(dad_text):
+# -------------------------------
+# Function: Add new contract
+# -------------------------------
+def add_contract(data):
     dad_text = data.get("dad_text", "")
     validate_contract(dad_text)
-    contracts = load_contracts()
 
-    contract= {
+    contract_id = str(uuid.uuid4())
+    contract = {
+        "id": contract_id,
         "dad_text": dad_text,
         "status": "draft",
-        "created_by": data.get("create_by", "PartyA"),
-        "for_party":data.get("for_party", "PartyB"),
+        "created_by": data.get("created_by", "PartyA"),
+        "for_party": data.get("for_party", "PartyB"),
         "approved_by_party_a": False,
         "approved_by_party_b": False,
     }
-    contract_id = str(uuid.uuid4())
-    save_contracts(contract_id, contract)
+
+    filename = os.path.join(CONTRACTS_FOLDER, f"{contract_id}.json")
+    with open(filename, "w") as f:
+        json.dump(contract, f, indent=2)
 
     return contract_id, contract
 
-    # Optional: Check for duplicates
-    for c in contracts:
-        if c.get("dad") == dad_text:
-            raise ValueError("This contract already exists.")
+# -------------------------------
+# Function: Mark a contract as completed
+# -------------------------------
+def complete_contract(contract_id):
+    filepath = os.path.join(CONTRACTS_FOLDER, f"{contract_id}.json")
+    if not os.path.exists(filepath):
+        raise FileNotFoundError("Contract not found.")
 
-    record = {"dad": dad_text, "status": "submitted"}
-    contracts.append(record)
-    save_contracts(contracts)
+    with open(filepath, "r") as f:
+        contract = json.load(f)
 
-
-def complete_contract(index):
-    contracts = load_contracts()
-    if index < 0 or index >= len(contracts):
-        raise IndexError("Contract index out of range.")
-    if contracts[index]["status"] == "completed":
+    if contract["status"] == "completed":
         raise ValueError("Contract is already completed.")
-    contracts[index]["status"] = "completed"
-    save_contracts(contracts)
+
+    contract["status"] = "completed"
+
+    with open(filepath, "w") as f:
+        json.dump(contract, f, indent=2)

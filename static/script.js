@@ -1,4 +1,21 @@
+document.getElementById("contract-form").addEventListener("submit", async function(e) {
+  e.preventDefault();
+  const formData = new FormData(this);
+  const data = Object.fromEntries(formData.entries());
 
+  const res = await fetch("/create", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+
+  if (res.ok) {
+    alert("Contract created!");
+    location.reload();
+  } else {
+    alert("Error creating contract.");
+  }
+});
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contract-form");
   const feedback = document.getElementById("feedback");

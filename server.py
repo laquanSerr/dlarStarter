@@ -1,34 +1,42 @@
-from flask import  Flask, request, jsonify, redirect, render_template, send_from_directory
-from app.contract_logic import load_contracts, add_contract, complete_contract, get_contracts
+import json
+import os
+from flask import Flask, render_template, request, redirect, jsonify, send_from_directory
+from app.contract_logic import add_contract, get_contracts, complete_contract  # Ensure these functions are defined in contract_logic.py
+from app import create_app
 
+app = create_app()
 app = Flask(__name__)
 
-DATA_PATH = "contracts/saved_dads.json"
+#DATA_PATH = "contracts/saved_dads.json"
 
-contracts = {}  # Simulating contract storage
+
+
+
+
+@app.route("/contracts")
+def contracts():
+    all_contracts = get_contracts()
+    return jsonify(all_contracts)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/create', methods=['POST'])
+def create():
+    data = request.json
+    contract_id, contract = add_contract(data)  # Ensure add_contract returns these values
+    return jsonify({"contract_id": contract_id, "contract": contract}), 201
+
+
+
+
 @app.route('/contracts')
 def list_contracts():
     contracts = get_contracts()
     return render_template('contracts.html', contracts=contracts)
 
-def load_contract(contract_id):
-    return contracts.get(contract_id)
 
-def save_contract(contract_id, contract):
-    contracts[contract_id] = contract
-
-@app.route('/')
-def index():
-    from app.contract_logic import get_contracts
-    contracts = get_contracts()
-    return render_template('index.html', contracts=contracts)
-
-@app.route('/create', methods=['POST'])
-def create():
-    data = request.form.to_dict()
-    contract_id, contract = add_contract(data)
-    contracts[contract_id] = contract
-    return jsonify({'status': 'created', 'contract_id': contract_id})
 
 @app.route('/edit/<contract_id>', methods=['POST'])
 def edit(contract_id):
@@ -94,9 +102,7 @@ def approve(contract_id):
 
     return redirect(f"/summary/{contract_id}")
 
-@app.route('/contracts', methods=['GET'])
-def get_contracts():
-    return jsonify(load_contracts())
+
 
 @app.route('/submit', methods=['POST'])
 def submit_contract():
@@ -112,14 +118,17 @@ def submit_contract():
     except Exception as e:
         return jsonify({"message": "Unexpected error: " + str(e)}), 500
 
-@app.route('/complete', methods=['POST'])
-def mark_complete():
-    data = request.get_json()
+@app.route("/complete/<contract_id>", methods=["POST"])
+def mark_contract_complete(contract_id):
     try:
-        complete_contract(data['index'])
-        return jsonify({"message": "Contract marked as completed."}), 200
+        complete_contract(contract_id)
+        return jsonify({"message": f"Contract {contract_id} marked as completed."}), 200
+    except FileNotFoundError as e:
+        return jsonify({"error": str(e)}), 404
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 400
     except Exception as e:
-        return jsonify({"message": str(e)}), 400
+        return jsonify({"error": "Unexpected error occurred."}), 500
 
 @app.route('/static/<path:filename>')
 def serve_static(filename):
