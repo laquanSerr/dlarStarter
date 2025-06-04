@@ -7,21 +7,38 @@
     <script src="/static/script.js" defer></script>
 </head>
 <body>
-  <h1>DLAR DAD Submission</h1>
+    <h1>DLAR DAD Submission</h1>
 
-  <form id="contract-form">
-    <label for="dad-input">Enter DAD:</label>
-    <textarea id="dad-input" name="dad" required></textarea>
-    <button type="submit">Submit</button>
-  </form>
-  <p id="feedback"></p>
+
+    <form action="/create" method="POST">
+    <label>Select Your Role:</label>
+    <select name="created_by">
+        <option value="PartyA">Party A</option>
+        <option value="PartyB">Party B</option>
+    </select>
+    <br>
+    <textarea name="dad_text" placeholder="Enter contract details..."></textarea>
+    <br>
+    <button type="submit">Create Contract</button>
+</form>
+
+
+
 
   <hr>
 
-  <h2>Submitted Contracts</h2>
-  <div id="contracts">
-    Loading...
-  </div>
+  <h3>Submitted Contracts</h3>
+<ul>
+    {% for contract in contracts %}
+        <li>
+            Contract ID: {{ contract.id }} -
+            <a href="/summary/{{ contract.id }}">View Summary</a>
+        </li>
+    {% else %}
+        <li>No contracts submitted yet.</li>
+    {% endfor %}
+</ul>
+
 </body>
 </html>
 

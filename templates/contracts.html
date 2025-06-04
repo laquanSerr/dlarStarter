@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Contracts</title>
+</head>
+<body>
+    <h2>Submitted Contracts</h2>
+    <ul>
+        {% for contract in contracts %}
+            <li>
+                ID: {{ contract.id }} | Created by: {{ contract.created_by }} |
+                <a href="/summary/{{ contract.id }}">View Summary</a>
+            </li>
+        {% else %}
+            <li>No contracts found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

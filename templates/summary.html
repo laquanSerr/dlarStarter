@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contract Summary</title>
+</head>
+<body>
+    <h1>Contract ID: {{ contract_id }}</h1>
+
+    <p><strong>Created by:</strong> {{ created_by }}</p>
+    <p><strong>Intended for:</strong> {{ for_party }}</p>
+    <p><strong>Status:</strong> {{ status }}</p>
+
+    <h3>Contract Details:</h3>
+    <p>{{ dad_text }}</p>
+
+    <hr>
+
+    <h3>Actions</h3>
+    <form action="/edit/{{ contract_id }}" method="POST">
+        <input type="hidden" name="role" value="PartyB">
+        <textarea name="dad_text" placeholder="Party B can propose edits..."></textarea><br>
+        <button type="submit">Edit Contract (Party B)</button>
+    </form>
+
+    <form action="/approve/{{ contract_id }}" method="POST">
+        <input type="hidden" name="role" value="PartyA">
+        <button type="submit">Approve Contract (Party A)</button>
+    </form>
+
+    {% if approved_by_party_a %}
+        <p style="color: green;"><strong>Party A has approved the contract.</strong></p>
+    {% endif %}
+</body>
+</html>
