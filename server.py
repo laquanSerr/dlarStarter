@@ -1,11 +1,10 @@
-import json
-import os
 from flask import Flask, render_template, request, redirect, jsonify, send_from_directory
-from app.contract_logic import add_contract, get_contracts, complete_contract  # Ensure these functions are defined in contract_logic.py
+from dlarStarter.app.logic.contract_logic import add_contract, get_contracts, complete_contract  # Ensure these functions are defined in contract_logic.py
 from app import create_app
 
 app = create_app()
-app = Flask(__name__)
+if __name__ == "__main__":
+    app.run(debug=True)
 
 #DATA_PATH = "contracts/saved_dads.json"
 
@@ -132,7 +131,7 @@ def mark_contract_complete(contract_id):
 
 @app.route('/static/<path:filename>')
 def serve_static(filename):
-    return send_from_directory('static', filename)
+    return send_from_directory('app/static', filename)
 
 if __name__ == '__main__':
     app.run(debug=True)

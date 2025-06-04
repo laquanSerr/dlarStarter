@@ -41,9 +41,7 @@ def add_contract(data):
     dad_text = data.get("dad_text", "")
     validate_contract(dad_text)
 
-    contract_id = str(uuid.uuid4())
     contract = {
-        "id": contract_id,
         "dad_text": dad_text,
         "status": "draft",
         "created_by": data.get("created_by", "PartyA"),
@@ -52,11 +50,13 @@ def add_contract(data):
         "approved_by_party_b": False,
     }
 
-    filename = os.path.join(CONTRACTS_FOLDER, f"{contract_id}.json")
-    with open(filename, "w") as f:
+    contract_id = str(uuid.uuid4())
+    file_path = os.path.join("contracts", f"{contract_id}.json")
+    with open(file_path, "w") as f:
         json.dump(contract, f, indent=2)
 
     return contract_id, contract
+
 
 # -------------------------------
 # Function: Mark a contract as completed

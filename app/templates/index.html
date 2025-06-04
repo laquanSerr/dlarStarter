@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DLAR Agreement Submission</title>
+    <link rel="stylesheet" href="app/static/style.css">
+    <script src="app/static/script.js" defer></script>
+</head>
+<body>
+        <h1>DLAR DAD Submission</h1>
+            <form method="post" action="/create">
+              <label>Select Role:</label>
+              <select name="created_by">
+                <option value="PartyA">Party A</option>
+                <option value="PartyB">Party B</option>
+              </select><br><br>
+              <textarea name="terms" placeholder="Enter contract details..."></textarea><br><br>
+              <button type="submit">Create Contract</button>
+            </form>
+
+            <h3>Submitted Contracts</h3>
+            {% for contract in contracts %}
+              <div>
+                <strong>ID:</strong> {{ contract.id }}<br>
+                <strong>Status:</strong> {{ contract.status }}<br>
+                <strong>Terms:</strong> {{ contract.terms }}<br>
+                <form method="post" action="/approve/{{ contract.id }}">
+                  <input type="hidden" name="user" value="PartyA">
+                  <button type="submit">Party A Approve</button>
+                </form>
+                <form method="post" action="/approve/{{ contract.id }}">
+                  <input type="hidden" name="user" value="PartyB">
+                  <button type="submit">Party B Approve</button>
+                </form>
+              </div>
+              <hr>
+            {% else %}
+              <p>No contracts submitted yet.</p>
+            {% endfor %}
+
+</body>
+</html>
+
