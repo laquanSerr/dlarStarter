@@ -2,15 +2,14 @@ from flask import Flask, render_template, request, redirect, jsonify, send_from_
 from dlarStarter.app.logic.contract_logic import add_contract, get_contracts, complete_contract  # Ensure these functions are defined in contract_logic.py
 from app import create_app
 
-app = create_app()
-if __name__ == "__main__":
-    app.run(debug=True)
+
 
 #DATA_PATH = "contracts/saved_dads.json"
 
 
 
 
+app = create_app()
 
 @app.route("/contracts")
 def contracts():
@@ -133,7 +132,8 @@ def mark_contract_complete(contract_id):
 def serve_static(filename):
     return send_from_directory('app/static', filename)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     app.run(debug=True)
 
 

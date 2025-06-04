@@ -1,11 +1,10 @@
 from flask import Flask
-from app.routes import contracts
 
 def create_app():
     app = Flask(__name__)
-    app.secret_key = "supersecretkey"  # Or load from .env
+    app.secret_key = 'supersecret'  # Use .env in real apps
 
-    app.register_blueprint(contracts.bp)
+    from app.routes.contracts import contracts_blueprint
+    app.register_blueprint(contracts_blueprint)
 
     return app
-

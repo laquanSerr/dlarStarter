@@ -3,6 +3,20 @@
 <head>
     <title>All Contracts</title>
 </head>
+    {% for contract in contracts %}
+    <div>
+        <p>{{ contract.dad_text }}</p>
+
+        {% if contract.status == 'draft' and role == 'PartyB' %}
+            <a href="/edit/{{ contract.id }}">Edit</a>
+        {% endif %}
+
+        {% if contract.status != 'completed' and role == 'PartyA' %}
+            <a href="/approve/{{ contract.id }}">Approve</a>
+        {% endif %}
+    </div>
+{% endfor %}
+
 <body>
     <h2>Submitted Contracts</h2>
     <ul>
