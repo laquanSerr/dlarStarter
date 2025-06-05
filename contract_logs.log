@@ -378,3 +378,26 @@
 2025-06-04 13:08:17,829 - INFO -  * Restarting with stat
 2025-06-04 13:08:18,174 - WARNING -  * Debugger is active!
 2025-06-04 13:08:18,178 - INFO -  * Debugger PIN: 137-714-216
+2025-06-04 13:09:02,395 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-04 13:09:02,395 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-04 13:09:02,396 - INFO -  * Restarting with stat
+2025-06-04 13:09:02,699 - WARNING -  * Debugger is active!
+2025-06-04 13:09:02,702 - INFO -  * Debugger PIN: 137-714-216
+2025-06-04 13:09:05,362 - INFO - 127.0.0.1 - - [04/Jun/2025 13:09:05] "GET / HTTP/1.1" 200 -
+2025-06-04 13:09:05,447 - INFO - 127.0.0.1 - - [04/Jun/2025 13:09:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-04 13:09:05,453 - INFO - 127.0.0.1 - - [04/Jun/2025 13:09:05] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-04 13:09:12,403 - INFO - 127.0.0.1 - - [04/Jun/2025 13:09:12] "[32mPOST /logout HTTP/1.1[0m" 302 -
+2025-06-04 13:09:12,410 - INFO - 127.0.0.1 - - [04/Jun/2025 13:09:12] "GET / HTTP/1.1" 200 -
+2025-06-04 13:09:12,428 - INFO - 127.0.0.1 - - [04/Jun/2025 13:09:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-04 13:09:12,432 - INFO - 127.0.0.1 - - [04/Jun/2025 13:09:12] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-04 13:09:14,448 - INFO - 127.0.0.1 - - [04/Jun/2025 13:09:14] "[32mPOST /select_role HTTP/1.1[0m" 302 -
+2025-06-04 13:09:14,456 - INFO - 127.0.0.1 - - [04/Jun/2025 13:09:14] "GET / HTTP/1.1" 200 -
+2025-06-04 13:09:14,480 - INFO - 127.0.0.1 - - [04/Jun/2025 13:09:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-04 13:09:14,483 - INFO - 127.0.0.1 - - [04/Jun/2025 13:09:14] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-04 23:15:01,288 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-04 23:15:01,288 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-04 23:15:01,293 - INFO -  * Restarting with stat
+2025-06-04 23:15:01,592 - WARNING -  * Debugger is active!
+2025-06-04 23:15:01,596 - INFO -  * Debugger PIN: 137-714-216
