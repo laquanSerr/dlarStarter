@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Contract</title>
+</head>
+<body>
+    <form action="{{ url_for('contracts.create_contract') }}" method="POST">
+      <div class="mb-3">
+        <label for="service">Service</label>
+        <input type="text" name="service" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="recipient">Recipient Email</label>
+        <input type="email" name="recipient_email" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="terms">Contract Terms</label>
+        <textarea name="terms" class="form-control" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Create Contract</button>
+    </form>
+
+
+</body>
+</html>

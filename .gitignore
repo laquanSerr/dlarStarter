@@ -5,8 +5,9 @@ venv/
 # PyCharm project settings
 .idea/
 idea/
-
-
+.dlar.env
+.env
+deleted_misc/
 # Bytecode
 __pycache__/
 *.pyc
@@ -18,3 +19,5 @@ Thumbs.db
 # Contract artifacts and generated files
 contracts/saved_dads.json
 artifacts/
+contract_logs.log
+blockchain_utils.py

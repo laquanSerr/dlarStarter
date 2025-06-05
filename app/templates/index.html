@@ -2,48 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DLAR Agreement Submission</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <title>Dashboard</title>
 </head>
 <body>
-    <h1>DLAR DAD Submission</h1>
+    <h1>Welcome, {% if current_user %} {{ current_user.name }} {% endif %}</h1>
 
-    {% if not role %}
-        <form method="POST" action="{{ url_for('contracts.select_role') }}">
-            <label>Select Your Role:</label>
-            <select name="role">
-                <option value="PartyA">Party A (Initiator)</option>
-                <option value="PartyB">Party B (Receiver)</option>
-            </select>
-            <button type="submit">Login</button>
-        </form>
-    {% else %}
-        <p>Logged in as <strong>{{ role }}</strong></p>
-        <form method="POST" action="{{ url_for('contracts.logout') }}">
-            <button type="submit">Switch Role</button>
-        </form>
-        {% if role == "PartyA" %}
-            <h2>Create Contract</h2>
-            <form method="POST" action="{{ url_for('contracts.create') }}">
-                <textarea name="terms" placeholder="Enter contract terms..." rows="4" cols="50"></textarea>
-                <input type="hidden" name="for_party" value="PartyB">
-                <br>
-                <button type="submit">Create Contract</button>
-            </form>
-        {% endif %}
+    <h2>Sent Contracts</h2>
+    <ul>
+      {% for contract in sent %}
+        <li>To: {{ contract.recipient_id }} — {{ contract.term[:30] }}...</li>
+      {% else %}
+        <li>No sent contracts found.</li>
+      {% endfor %}
+    </ul>
 
-        <h2>Your Submitted Contracts</h2>
-        {% if contracts %}
-            <ul>
-                {% for contract in contracts %}
-                    <li>{{ contract['id'] }} — {{ contract['terms'][:30] }}...</li>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p>No contracts submitted yet.</p>
-        {% endif %}
-    {% endif %}
+    <h2>Received Contracts</h2>
+    <ul>
+      {% for contract in received %}
+        <li>From: {{ contract.initiator_id }} — {{ contract.term[:30] }}...</li>
+      {% else %}
+        <li>No received contracts found.</li>
+      {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('contracts.create_contract') }}">Create Contract</a>
 </body>
 </html>
-

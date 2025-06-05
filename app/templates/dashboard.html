@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Dashboard</title>
+  <meta charset="UTF-8">
+  <title>DLAR Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-        <h1>Welcome, {{ current_user.name }}</h1>
+ <!-- Moved the body tag up -->
+<div class="container mt-4">
+  <h1>Welcome to the DLAR Test App</h1>
 
+  <ul class="nav nav-tabs" id="dlarTabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="create-tab" data-bs-toggle="tab" href="#create" role="tab">Create Contract</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="sent-tab" data-bs-toggle="tab" href="#sent" role="tab">Sent Contracts</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="received-tab" data-bs-toggle="tab" href="#received" role="tab">Received Contracts</a>
+    </li>
+  </ul>
+  <div class="tab-content mt-3">
+    <div class="tab-pane fade show active" id="create" role="tabpanel">
+      {% include 'partials/create_contract.html' %}
+    </div>
+    <div class="tab-pane fade" id="sent" role="tabpanel">
+      {% include 'partials/sent_contracts.html' %}
+    </div>
+    <div class="tab-pane fade" id="received" role="tabpanel">
+      {% include 'partials/received_contracts.html' %}
+    </div>
+  </div>
+</div>
 
-    <h2>Sent Contracts</h2>
-    <ul>
-      {% for contract in sent %}
-        <li>To: {{ contract.recipient_id }} — {{ contract.term[:30] }}...</li>
-      {% endfor %}
-    </ul>
-
-    <h2>Received Contracts</h2>
-    <ul>
-      {% for contract in received %}
-        <li>From: {{ contract.initiator_id }} — {{ contract.term[:30]... }}</li>
-      {% endfor %}
-
-    </ul>
-    <a href="{{url_for('contracts.create_contract')}}">Create Contracts</a>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

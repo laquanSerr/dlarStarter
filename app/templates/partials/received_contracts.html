@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Received Contracts</title>
+</head>
+<body>
+    <h4>📥 Received Contracts</h4>
+    <ul class="list-group">
+      {% for contract in received_contracts %}
+        <li class="list-group-item">
+          <strong>From:</strong> {{ contract.sender_name or contract.sender_id }} <br>
+          <strong>Status:</strong> {{ contract.status }} <br>
+          <em>{{ contract.terms }}</em>
+        </li>
+      {% else %}
+        <li class="list-group-item">No received contracts yet.</li>
+      {% endfor %}
+    </ul>
+
+
+</body>
+</html>

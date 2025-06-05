@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request, redirect, jsonify, send_from_directory
 from dlarStarter.app.logic.contract_logic import add_contract, get_contracts, complete_contract  # Ensure these functions are defined in contract_logic.py
+from app.routes.dashboard_routes import dashboard_blueprint
 from app import create_app
 
 from flask import Flask
-from app.routes.dashboard_routes import dashboard_blueprint
 
 
 
@@ -15,7 +15,7 @@ from app.routes.dashboard_routes import dashboard_blueprint
 
 
 app = create_app()
-app.register_blueprint(dashboard_blueprint)
+
 
 @app.route("/contracts")
 def contracts():

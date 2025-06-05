@@ -582,3 +582,136 @@
 2025-06-05 01:42:38,842 - INFO -  * Restarting with stat
 2025-06-05 01:42:39,442 - WARNING -  * Debugger is active!
 2025-06-05 01:42:39,445 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 03:47:47,671 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 03:47:47,671 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 03:47:47,673 - INFO -  * Restarting with stat
+2025-06-05 03:47:48,225 - WARNING -  * Debugger is active!
+2025-06-05 03:47:48,231 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 03:47:53,108 - INFO - 127.0.0.1 - - [05/Jun/2025 03:47:53] "[33mPOST /select_role HTTP/1.1[0m" 404 -
+2025-06-05 03:48:04,047 - INFO - 127.0.0.1 - - [05/Jun/2025 03:48:04] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-06-05 03:48:04,146 - INFO - 127.0.0.1 - - [05/Jun/2025 03:48:04] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-05 03:48:04,149 - INFO - 127.0.0.1 - - [05/Jun/2025 03:48:04] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-05 03:48:04,189 - INFO - 127.0.0.1 - - [05/Jun/2025 03:48:04] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=azZsU66OiQogjPTWUtFt HTTP/1.1" 200 -
+2025-06-05 03:48:04,209 - INFO - 127.0.0.1 - - [05/Jun/2025 03:48:04] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-05 03:48:26,006 - INFO - 127.0.0.1 - - [05/Jun/2025 03:48:26] "[33mPOST /auth/register HTTP/1.1[0m" 404 -
+2025-06-05 03:55:05,569 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\app\\routes\\contracts.py', reloading
+2025-06-05 03:55:05,683 - INFO -  * Restarting with stat
+2025-06-05 03:55:06,268 - WARNING -  * Debugger is active!
+2025-06-05 03:55:06,271 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 03:56:15,226 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 03:56:15,226 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 03:56:15,228 - INFO -  * Restarting with stat
+2025-06-05 03:56:15,796 - WARNING -  * Debugger is active!
+2025-06-05 03:56:15,799 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 03:56:31,307 - INFO - 127.0.0.1 - - [05/Jun/2025 03:56:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-06-05 03:56:31,406 - INFO - 127.0.0.1 - - [05/Jun/2025 03:56:31] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-05 03:56:31,408 - INFO - 127.0.0.1 - - [05/Jun/2025 03:56:31] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-05 03:56:31,421 - INFO - 127.0.0.1 - - [05/Jun/2025 03:56:31] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=bOGClxqr32ON62jxjej0 HTTP/1.1" 200 -
+2025-06-05 03:56:40,116 - INFO - 127.0.0.1 - - [05/Jun/2025 03:56:40] "[33mPOST /auth/register HTTP/1.1[0m" 404 -
+2025-06-05 04:00:52,178 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 04:00:52,178 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 04:00:52,179 - INFO -  * Restarting with stat
+2025-06-05 04:00:52,792 - WARNING -  * Debugger is active!
+2025-06-05 04:00:52,795 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 04:00:56,117 - INFO - 127.0.0.1 - - [05/Jun/2025 04:00:56] "GET / HTTP/1.1" 200 -
+2025-06-05 04:01:06,623 - INFO - 127.0.0.1 - - [05/Jun/2025 04:01:06] "[35m[1mGET /create HTTP/1.1[0m" 500 -
+2025-06-05 04:01:06,717 - INFO - 127.0.0.1 - - [05/Jun/2025 04:01:06] "[36mGET /create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-05 04:01:06,721 - INFO - 127.0.0.1 - - [05/Jun/2025 04:01:06] "[36mGET /create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-05 04:01:06,731 - INFO - 127.0.0.1 - - [05/Jun/2025 04:01:06] "GET /create?__debugger__=yes&cmd=resource&f=console.png&s=WHpZwxtmm2uVCsXub8dZ HTTP/1.1" 200 -
+2025-06-05 04:01:13,073 - INFO - 127.0.0.1 - - [05/Jun/2025 04:01:13] "[35m[1mGET /create HTTP/1.1[0m" 500 -
+2025-06-05 04:01:13,094 - INFO - 127.0.0.1 - - [05/Jun/2025 04:01:13] "[36mGET /create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-05 04:01:13,097 - INFO - 127.0.0.1 - - [05/Jun/2025 04:01:13] "[36mGET /create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-05 04:01:13,107 - INFO - 127.0.0.1 - - [05/Jun/2025 04:01:13] "[36mGET /create?__debugger__=yes&cmd=resource&f=console.png&s=WHpZwxtmm2uVCsXub8dZ HTTP/1.1[0m" 304 -
+2025-06-05 04:01:13,129 - INFO - 127.0.0.1 - - [05/Jun/2025 04:01:13] "GET /create?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-06-05 04:01:26,382 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 04:01:26,382 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 04:01:26,383 - INFO -  * Restarting with stat
+2025-06-05 04:01:27,003 - WARNING -  * Debugger is active!
+2025-06-05 04:01:27,006 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 04:02:02,529 - INFO - 127.0.0.1 - - [05/Jun/2025 04:02:02] "GET / HTTP/1.1" 200 -
+2025-06-05 04:18:47,359 - INFO - 127.0.0.1 - - [05/Jun/2025 04:18:47] "GET / HTTP/1.1" 200 -
+2025-06-05 04:18:49,508 - INFO - 127.0.0.1 - - [05/Jun/2025 04:18:49] "GET / HTTP/1.1" 200 -
+2025-06-05 04:18:51,305 - INFO - 127.0.0.1 - - [05/Jun/2025 04:18:51] "GET / HTTP/1.1" 200 -
+2025-06-05 04:18:51,650 - INFO - 127.0.0.1 - - [05/Jun/2025 04:18:51] "GET / HTTP/1.1" 200 -
+2025-06-05 04:27:54,443 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 04:27:54,443 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 04:27:54,444 - INFO -  * Restarting with stat
+2025-06-05 04:27:55,153 - WARNING -  * Debugger is active!
+2025-06-05 04:27:55,156 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 04:27:57,492 - INFO - 127.0.0.1 - - [05/Jun/2025 04:27:57] "GET / HTTP/1.1" 200 -
+2025-06-05 04:27:59,875 - INFO - 127.0.0.1 - - [05/Jun/2025 04:27:59] "GET / HTTP/1.1" 200 -
+2025-06-05 04:28:59,380 - INFO - 127.0.0.1 - - [05/Jun/2025 04:28:59] "GET / HTTP/1.1" 200 -
+2025-06-05 04:29:01,495 - INFO - 127.0.0.1 - - [05/Jun/2025 04:29:01] "[35m[1mGET /create HTTP/1.1[0m" 500 -
+2025-06-05 04:29:01,592 - INFO - 127.0.0.1 - - [05/Jun/2025 04:29:01] "[36mGET /create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-05 04:29:01,594 - INFO - 127.0.0.1 - - [05/Jun/2025 04:29:01] "[36mGET /create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-05 04:29:01,623 - INFO - 127.0.0.1 - - [05/Jun/2025 04:29:01] "GET /create?__debugger__=yes&cmd=resource&f=console.png&s=2kdZwT4oIXR3sj2aHXsR HTTP/1.1" 200 -
+2025-06-05 04:29:04,671 - INFO - 127.0.0.1 - - [05/Jun/2025 04:29:04] "[35m[1mGET /create HTTP/1.1[0m" 500 -
+2025-06-05 04:29:04,693 - INFO - 127.0.0.1 - - [05/Jun/2025 04:29:04] "[36mGET /create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-05 04:29:04,696 - INFO - 127.0.0.1 - - [05/Jun/2025 04:29:04] "[36mGET /create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-05 04:29:04,710 - INFO - 127.0.0.1 - - [05/Jun/2025 04:29:04] "[36mGET /create?__debugger__=yes&cmd=resource&f=console.png&s=2kdZwT4oIXR3sj2aHXsR HTTP/1.1[0m" 304 -
+2025-06-05 04:29:04,730 - INFO - 127.0.0.1 - - [05/Jun/2025 04:29:04] "[36mGET /create?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-05 04:29:11,917 - INFO - 127.0.0.1 - - [05/Jun/2025 04:29:11] "[35m[1mGET /create HTTP/1.1[0m" 500 -
+2025-06-05 04:29:11,943 - INFO - 127.0.0.1 - - [05/Jun/2025 04:29:11] "[36mGET /create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-05 04:29:11,947 - INFO - 127.0.0.1 - - [05/Jun/2025 04:29:11] "[36mGET /create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-05 04:29:11,955 - INFO - 127.0.0.1 - - [05/Jun/2025 04:29:11] "[36mGET /create?__debugger__=yes&cmd=resource&f=console.png&s=2kdZwT4oIXR3sj2aHXsR HTTP/1.1[0m" 304 -
+2025-06-05 04:29:31,322 - INFO - 127.0.0.1 - - [05/Jun/2025 04:29:31] "GET / HTTP/1.1" 200 -
+2025-06-05 04:31:48,620 - INFO - 127.0.0.1 - - [05/Jun/2025 04:31:48] "[35m[1mGET /create HTTP/1.1[0m" 500 -
+2025-06-05 04:31:48,641 - INFO - 127.0.0.1 - - [05/Jun/2025 04:31:48] "[36mGET /create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-05 04:31:48,645 - INFO - 127.0.0.1 - - [05/Jun/2025 04:31:48] "[36mGET /create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-05 04:31:48,673 - INFO - 127.0.0.1 - - [05/Jun/2025 04:31:48] "[36mGET /create?__debugger__=yes&cmd=resource&f=console.png&s=2kdZwT4oIXR3sj2aHXsR HTTP/1.1[0m" 304 -
+2025-06-05 04:37:06,654 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 04:37:06,654 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 04:37:06,655 - INFO -  * Restarting with stat
+2025-06-05 04:37:07,206 - WARNING -  * Debugger is active!
+2025-06-05 04:37:07,209 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 04:37:09,753 - INFO - 127.0.0.1 - - [05/Jun/2025 04:37:09] "[31m[1mGET /create HTTP/1.1[0m" 401 -
+2025-06-05 04:37:22,124 - INFO - 127.0.0.1 - - [05/Jun/2025 04:37:22] "GET / HTTP/1.1" 200 -
+2025-06-05 04:37:37,652 - INFO - 127.0.0.1 - - [05/Jun/2025 04:37:37] "[31m[1mGET /dashboard HTTP/1.1[0m" 401 -
+2025-06-05 04:37:54,958 - INFO - 127.0.0.1 - - [05/Jun/2025 04:37:54] "GET /login HTTP/1.1" 200 -
+2025-06-05 04:38:06,974 - INFO - 127.0.0.1 - - [05/Jun/2025 04:38:06] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-06-05 04:38:07,066 - INFO - 127.0.0.1 - - [05/Jun/2025 04:38:07] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-06-05 04:38:07,069 - INFO - 127.0.0.1 - - [05/Jun/2025 04:38:07] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-06-05 04:38:07,085 - INFO - 127.0.0.1 - - [05/Jun/2025 04:38:07] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=fejeRbolz2PaCV3hdKeI HTTP/1.1" 200 -
+2025-06-05 04:38:07,114 - INFO - 127.0.0.1 - - [05/Jun/2025 04:38:07] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-06-05 04:38:20,989 - INFO - 127.0.0.1 - - [05/Jun/2025 04:38:20] "[33mGET /register HTTP/1.1[0m" 404 -
+2025-06-05 04:38:34,959 - INFO - 127.0.0.1 - - [05/Jun/2025 04:38:34] "GET / HTTP/1.1" 200 -
+2025-06-05 04:38:38,661 - INFO - 127.0.0.1 - - [05/Jun/2025 04:38:38] "[31m[1mGET /create HTTP/1.1[0m" 401 -
+2025-06-05 04:38:58,998 - INFO - 127.0.0.1 - - [05/Jun/2025 04:38:58] "GET / HTTP/1.1" 200 -
+2025-06-05 04:39:02,552 - INFO - 127.0.0.1 - - [05/Jun/2025 04:39:02] "[31m[1mGET /create HTTP/1.1[0m" 401 -
+2025-06-05 04:39:17,231 - INFO - 127.0.0.1 - - [05/Jun/2025 04:39:17] "[31m[1mGET /dashboard HTTP/1.1[0m" 401 -
+2025-06-05 04:39:32,736 - INFO - 127.0.0.1 - - [05/Jun/2025 04:39:32] "GET /login HTTP/1.1" 200 -
+2025-06-05 04:40:20,112 - INFO - 127.0.0.1 - - [05/Jun/2025 04:40:20] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-06-05 04:40:20,136 - INFO - 127.0.0.1 - - [05/Jun/2025 04:40:20] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-05 04:40:20,139 - INFO - 127.0.0.1 - - [05/Jun/2025 04:40:20] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-05 04:40:20,150 - INFO - 127.0.0.1 - - [05/Jun/2025 04:40:20] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=fejeRbolz2PaCV3hdKeI HTTP/1.1[0m" 304 -
+2025-06-05 04:41:22,667 - INFO - 127.0.0.1 - - [05/Jun/2025 04:41:22] "[31m[1mGET /dashboard HTTP/1.1[0m" 401 -
+2025-06-05 04:41:44,818 - INFO - 127.0.0.1 - - [05/Jun/2025 04:41:44] "GET / HTTP/1.1" 200 -
+2025-06-05 04:42:17,774 - INFO - 127.0.0.1 - - [05/Jun/2025 04:42:17] "[31m[1mGET /create HTTP/1.1[0m" 401 -
+2025-06-05 04:44:00,088 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\app\\__init__.py', reloading
+2025-06-05 04:44:00,192 - INFO -  * Restarting with stat
+2025-06-05 04:44:00,753 - WARNING -  * Debugger is active!
+2025-06-05 04:44:00,756 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 04:46:02,277 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 04:46:02,278 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 04:46:02,281 - INFO -  * Restarting with stat
+2025-06-05 04:46:02,978 - WARNING -  * Debugger is active!
+2025-06-05 04:46:02,981 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 04:46:06,193 - INFO - 127.0.0.1 - - [05/Jun/2025 04:46:06] "[32mGET /create HTTP/1.1[0m" 302 -
+2025-06-05 04:46:06,200 - INFO - 127.0.0.1 - - [05/Jun/2025 04:46:06] "GET /login?next=/create HTTP/1.1" 200 -
+2025-06-05 04:46:27,025 - INFO - 127.0.0.1 - - [05/Jun/2025 04:46:27] "[32mPOST /login?next=/create HTTP/1.1[0m" 302 -
+2025-06-05 04:46:27,031 - INFO - 127.0.0.1 - - [05/Jun/2025 04:46:27] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-05 04:46:27,035 - INFO - 127.0.0.1 - - [05/Jun/2025 04:46:27] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-06-05 04:46:52,974 - INFO - 127.0.0.1 - - [05/Jun/2025 04:46:52] "[32mPOST /login?next=/dashboard HTTP/1.1[0m" 302 -
+2025-06-05 04:46:52,984 - INFO - 127.0.0.1 - - [05/Jun/2025 04:46:52] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-05 04:46:52,991 - INFO - 127.0.0.1 - - [05/Jun/2025 04:46:52] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-06-05 04:47:19,993 - INFO - 127.0.0.1 - - [05/Jun/2025 04:47:19] "[33mGET /auth/register HTTP/1.1[0m" 404 -
+2025-06-05 04:47:37,448 - INFO - 127.0.0.1 - - [05/Jun/2025 04:47:37] "[33mGET /auth/login HTTP/1.1[0m" 404 -
+2025-06-05 04:47:48,298 - INFO - 127.0.0.1 - - [05/Jun/2025 04:47:48] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-05 04:47:48,305 - INFO - 127.0.0.1 - - [05/Jun/2025 04:47:48] "GET /login?next=/dashboard HTTP/1.1" 200 -

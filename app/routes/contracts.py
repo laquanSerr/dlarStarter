@@ -45,7 +45,7 @@ def index():
 
     return render_template("index.html", role=role, contracts=filtered_contracts)
 
-@contracts_blueprint.route("/select_role", methods=["POST"])
+@contracts_blueprint.route("/select_role", endpoints='select_roles',  methods=["POST"])
 def select_role():
     selected_role = request.form.get("role")
     session["role"] = selected_role

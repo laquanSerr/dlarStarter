@@ -3,6 +3,9 @@
 <head>
     <title>All Contracts</title>
 </head>
+<body> <!-- Moved the body tag up -->
+    <h2>All Contracts</h2>
+
     {% for contract in contracts %}
     <div>
         <p>{{ contract.dad_text }}</p>
@@ -15,9 +18,8 @@
             <a href="/approve/{{ contract.id }}">Approve</a>
         {% endif %}
     </div>
-{% endfor %}
+    {% endfor %}
 
-<body>
     <h2>Submitted Contracts</h2>
     <ul>
         {% for contract in contracts %}
@@ -29,12 +31,15 @@
             <li>No contracts found.</li>
         {% endfor %}
     </ul>
+
     <ul id="contract-list"></ul>
-        <script>
+    <script>
         fetch("/contracts")
           .then(res => res.json())
           .then(data => {
             const list = document.getElementById("contract-list");
+            list.innerHTML = "";
+
             if (data.length === 0) {
               list.innerHTML = "<li>No contracts found.</li>";
             } else {
@@ -44,8 +49,9 @@
                 list.appendChild(li);
               });
             }
-          });
-        </script>
+          })
+          .catch(error => console.error("Error fetching contracts:", error)); <!-- Added error handling -->
+    </script>
 
 </body>
 </html>

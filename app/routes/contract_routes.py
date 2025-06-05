@@ -1,10 +1,11 @@
+# app/routes/contract_routes.py
 from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import login_required, current_user
-from app.models import db, Contract, Company
+from app.logic.contract_logic import add_contract, get_contracts
 
-contracts_blueprint = Blueprint("contracts", __name__)
+contract_blueprint = Blueprint("contracts", __name__)
 
-@contracts_blueprint.route("/create", methods=["GET", "POST"])
+@contract_blueprint.route("/create", methods=["GET", "POST"])
 @login_required
 def create_contract():
     companies = Company.query.filter(Company.id != current_user.id).all()
@@ -23,3 +24,10 @@ def create_contract():
         db.session.commit()
         return redirect(url_for("dashboard.dashboard_view"))
     return render_template("create_contract.html", companies=companies)
+
+@contract_blueprint.route("/contracts", methods=["GET"])
+@login_required
+def contracts():
+    user_email = current_user.email
+    contracts = get_contracts(user_email)
+    return render_template("contracts.html", contracts=contracts)

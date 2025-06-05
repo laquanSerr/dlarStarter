@@ -3,4 +3,4 @@ from .user import User
 from .company import Company
 from .contract import Contract
 
-__all__ = ["User", "Contract"]
+__all__ = ["User", "Company","Contract"]
