@@ -1,23 +1,25 @@
-from flask import Blueprint, render_template, request, session, redirect
-from app.contract_logic import add_contract, get_contracts
+from flask import Blueprint, render_template, request, redirect, url_for
+from flask_login import login_required, current_user
+from app.models import db, Contract, Company
 
-contract_bp = Blueprint('contract', __name__)
+contracts_blueprint = Blueprint("contracts", __name__)
 
-@contract_bp.route('/create', methods=['GET', 'POST'])
-def create():
-    if request.method == 'POST':
-        data = {
-            "dad_text": request.form.get("dad_text"),
-            "created_by": session.get("role"),
-            "for_party": "PartyB" if session.get("role") == "PartyA" else "PartyA"
-        }
-        add_contract(data)
-        return redirect('/contracts')
-    return render_template('create_contract.html')
+@contracts_blueprint.route("/create", methods=["GET", "POST"])
+@login_required
+def create_contract():
+    companies = Company.query.filter(Company.id != current_user.id).all()
+    if request.method == "POST":
+        recipient_id = request.form["recipient_id"]
+        terms = request.form["terms"]
 
-@contract_bp.route('/contracts')
-def contracts():
-    role = session.get("role")
-    contracts = get_contracts()
-    filtered = [c for c in contracts if c["created_by"] == role or c["for_party"] == role]
-    return render_template('contracts.html', contracts=filtered, role=role)
+        contract = Contract(
+            initiator_id=current_user.id,
+            recipient_id=recipient_id,
+            terms=terms,
+            amount=1000.00,
+            status="pending"
+        )
+        db.session.add(contract)
+        db.session.commit()
+        return redirect(url_for("dashboard.dashboard_view"))
+    return render_template("create_contract.html", companies=companies)

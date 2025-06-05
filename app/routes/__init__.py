@@ -1,15 +1,16 @@
-from flask import Flask
-
 def create_app():
     app = Flask(__name__)
-    app.secret_key = 'supersecretkey'
+    app.config.from_object(Config)
 
-    from .routes.auth_routes import auth_bp
-    from .routes.contract_routes import contract_bp
-    from .routes.dashboard_routes import dashboard_bp
+    db.init_app(app)
+    login_manager.init_app(app)
 
-    app.register_blueprint(auth_bp)
-    app.register_blueprint(contract_bp)
-    app.register_blueprint(dashboard_bp)
+    from app.routes.auth_routes import auth_blueprint
+    from app.routes.contract_routes import contracts_blueprint
+    from app.routes.dashboard_routes import dashboard_blueprint
+
+    app.register_blueprint(auth_blueprint, url_prefix="/auth")
+    app.register_blueprint(contracts_blueprint)
+    app.register_blueprint(dashboard_blueprint)
 
     return app

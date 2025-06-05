@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+        <h1>Welcome, {{ current_user.name }}</h1>
+
+
+    <h2>Sent Contracts</h2>
+    <ul>
+      {% for contract in sent %}
+        <li>To: {{ contract.recipient_id }} — {{ contract.term[:30] }}...</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Received Contracts</h2>
+    <ul>
+      {% for contract in received %}
+        <li>From: {{ contract.initiator_id }} — {{ contract.term[:30]... }}</li>
+      {% endfor %}
+
+    </ul>
+    <a href="{{url_for('contracts.create_contract')}}">Create Contracts</a>
+</body>
+</html>

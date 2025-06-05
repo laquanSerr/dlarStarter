@@ -401,3 +401,184 @@
 2025-06-04 23:15:01,293 - INFO -  * Restarting with stat
 2025-06-04 23:15:01,592 - WARNING -  * Debugger is active!
 2025-06-04 23:15:01,596 - INFO -  * Debugger PIN: 137-714-216
+2025-06-04 23:15:55,399 - INFO - 127.0.0.1 - - [04/Jun/2025 23:15:55] "GET / HTTP/1.1" 200 -
+2025-06-04 23:15:55,542 - INFO - 127.0.0.1 - - [04/Jun/2025 23:15:55] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-04 23:15:55,575 - INFO - 127.0.0.1 - - [04/Jun/2025 23:15:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-04 23:15:55,613 - INFO - 127.0.0.1 - - [04/Jun/2025 23:15:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-04 23:16:05,971 - INFO - 127.0.0.1 - - [04/Jun/2025 23:16:05] "[32mPOST /select_role HTTP/1.1[0m" 302 -
+2025-06-04 23:16:05,977 - INFO - 127.0.0.1 - - [04/Jun/2025 23:16:05] "GET / HTTP/1.1" 200 -
+2025-06-04 23:16:05,998 - INFO - 127.0.0.1 - - [04/Jun/2025 23:16:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-04 23:16:06,002 - INFO - 127.0.0.1 - - [04/Jun/2025 23:16:06] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-04 23:48:36,576 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\app\\models.py', reloading
+2025-06-04 23:48:36,624 - INFO -  * Restarting with stat
+2025-06-04 23:48:36,929 - WARNING -  * Debugger is active!
+2025-06-04 23:48:36,932 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 00:00:01,939 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\app\\__init__.py', reloading
+2025-06-05 00:00:01,988 - INFO -  * Restarting with stat
+2025-06-05 00:13:46,549 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 00:13:46,549 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 00:13:46,551 - INFO -  * Restarting with stat
+2025-06-05 00:13:47,120 - WARNING -  * Debugger is active!
+2025-06-05 00:13:47,123 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 00:13:51,967 - INFO - 127.0.0.1 - - [05/Jun/2025 00:13:51] "GET / HTTP/1.1" 200 -
+2025-06-05 00:13:52,082 - INFO - 127.0.0.1 - - [05/Jun/2025 00:13:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 00:13:52,083 - INFO - 127.0.0.1 - - [05/Jun/2025 00:13:52] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 00:13:55,719 - INFO - 127.0.0.1 - - [05/Jun/2025 00:13:55] "GET / HTTP/1.1" 200 -
+2025-06-05 00:13:55,739 - INFO - 127.0.0.1 - - [05/Jun/2025 00:13:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 00:13:55,742 - INFO - 127.0.0.1 - - [05/Jun/2025 00:13:55] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 00:13:57,252 - INFO - 127.0.0.1 - - [05/Jun/2025 00:13:57] "[32mPOST /select_role HTTP/1.1[0m" 302 -
+2025-06-05 00:13:57,259 - INFO - 127.0.0.1 - - [05/Jun/2025 00:13:57] "GET / HTTP/1.1" 200 -
+2025-06-05 00:13:57,283 - INFO - 127.0.0.1 - - [05/Jun/2025 00:13:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 00:13:57,290 - INFO - 127.0.0.1 - - [05/Jun/2025 00:13:57] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 00:13:59,606 - INFO - 127.0.0.1 - - [05/Jun/2025 00:13:59] "GET / HTTP/1.1" 200 -
+2025-06-05 00:13:59,628 - INFO - 127.0.0.1 - - [05/Jun/2025 00:13:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 00:13:59,631 - INFO - 127.0.0.1 - - [05/Jun/2025 00:13:59] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 00:14:21,899 - INFO - 127.0.0.1 - - [05/Jun/2025 00:14:21] "GET / HTTP/1.1" 200 -
+2025-06-05 00:14:21,932 - INFO - 127.0.0.1 - - [05/Jun/2025 00:14:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 00:14:21,938 - INFO - 127.0.0.1 - - [05/Jun/2025 00:14:21] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 00:14:25,472 - INFO - 127.0.0.1 - - [05/Jun/2025 00:14:25] "[32mPOST /logout HTTP/1.1[0m" 302 -
+2025-06-05 00:14:25,482 - INFO - 127.0.0.1 - - [05/Jun/2025 00:14:25] "GET / HTTP/1.1" 200 -
+2025-06-05 00:14:25,504 - INFO - 127.0.0.1 - - [05/Jun/2025 00:14:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 00:14:25,509 - INFO - 127.0.0.1 - - [05/Jun/2025 00:14:25] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 00:15:28,422 - INFO - 127.0.0.1 - - [05/Jun/2025 00:15:28] "GET / HTTP/1.1" 200 -
+2025-06-05 00:15:28,449 - INFO - 127.0.0.1 - - [05/Jun/2025 00:15:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 00:15:28,453 - INFO - 127.0.0.1 - - [05/Jun/2025 00:15:28] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 00:16:43,345 - INFO - 127.0.0.1 - - [05/Jun/2025 00:16:43] "GET /auth/register HTTP/1.1" 200 -
+2025-06-05 00:16:43,414 - INFO - 127.0.0.1 - - [05/Jun/2025 00:16:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-05 00:17:25,661 - INFO - 127.0.0.1 - - [05/Jun/2025 00:17:25] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+2025-06-05 00:17:25,939 - INFO - 127.0.0.1 - - [05/Jun/2025 00:17:25] "GET /auth/register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-06-05 00:17:25,990 - INFO - 127.0.0.1 - - [05/Jun/2025 00:17:25] "GET /auth/register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-06-05 00:17:26,328 - INFO - 127.0.0.1 - - [05/Jun/2025 00:17:26] "GET /auth/register?__debugger__=yes&cmd=resource&f=console.png&s=XNKvPZxKpYcPqohFFasN HTTP/1.1" 200 -
+2025-06-05 00:17:26,579 - INFO - 127.0.0.1 - - [05/Jun/2025 00:17:26] "GET /auth/register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-06-05 00:35:03,642 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 00:35:03,642 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 00:35:03,645 - INFO -  * Restarting with stat
+2025-06-05 00:35:04,261 - WARNING -  * Debugger is active!
+2025-06-05 00:35:04,264 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 00:35:13,096 - INFO - 127.0.0.1 - - [05/Jun/2025 00:35:13] "GET / HTTP/1.1" 200 -
+2025-06-05 00:35:13,192 - INFO - 127.0.0.1 - - [05/Jun/2025 00:35:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 00:35:13,197 - INFO - 127.0.0.1 - - [05/Jun/2025 00:35:13] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 00:35:28,974 - INFO - 127.0.0.1 - - [05/Jun/2025 00:35:28] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+2025-06-05 00:35:28,995 - INFO - 127.0.0.1 - - [05/Jun/2025 00:35:28] "[36mGET /auth/register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-05 00:35:29,303 - INFO - 127.0.0.1 - - [05/Jun/2025 00:35:29] "[36mGET /auth/register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-05 00:35:29,553 - INFO - 127.0.0.1 - - [05/Jun/2025 00:35:29] "GET /auth/register?__debugger__=yes&cmd=resource&f=console.png&s=spyt8anD9OfUt3EnDdqa HTTP/1.1" 200 -
+2025-06-05 00:38:52,377 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\init_db.py', reloading
+2025-06-05 00:38:52,471 - INFO -  * Restarting with stat
+2025-06-05 00:38:53,148 - WARNING -  * Debugger is active!
+2025-06-05 00:38:53,151 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 00:39:45,872 - INFO - 127.0.0.1 - - [05/Jun/2025 00:39:45] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+2025-06-05 00:39:45,884 - INFO - 127.0.0.1 - - [05/Jun/2025 00:39:45] "GET / HTTP/1.1" 200 -
+2025-06-05 00:39:46,285 - INFO - 127.0.0.1 - - [05/Jun/2025 00:39:46] "GET /static/style.css HTTP/1.1" 200 -
+2025-06-05 00:39:46,289 - INFO - 127.0.0.1 - - [05/Jun/2025 00:39:46] "GET /static/script.js HTTP/1.1" 200 -
+2025-06-05 00:39:55,542 - INFO - 127.0.0.1 - - [05/Jun/2025 00:39:55] "[32mPOST /select_role HTTP/1.1[0m" 302 -
+2025-06-05 00:39:55,853 - INFO - 127.0.0.1 - - [05/Jun/2025 00:39:55] "GET / HTTP/1.1" 200 -
+2025-06-05 00:39:55,873 - INFO - 127.0.0.1 - - [05/Jun/2025 00:39:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 00:39:56,101 - INFO - 127.0.0.1 - - [05/Jun/2025 00:39:56] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 00:45:48,948 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\view_users.py', reloading
+2025-06-05 00:45:49,062 - INFO -  * Restarting with stat
+2025-06-05 00:45:49,677 - WARNING -  * Debugger is active!
+2025-06-05 00:45:49,680 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 00:46:14,657 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\view_users.py', reloading
+2025-06-05 00:46:14,742 - INFO -  * Restarting with stat
+2025-06-05 00:46:15,348 - WARNING -  * Debugger is active!
+2025-06-05 00:46:15,352 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 00:47:37,379 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\view_users.py', reloading
+2025-06-05 00:47:37,489 - INFO -  * Restarting with stat
+2025-06-05 00:47:38,120 - WARNING -  * Debugger is active!
+2025-06-05 00:47:38,123 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 00:48:09,005 - INFO - 127.0.0.1 - - [05/Jun/2025 00:48:09] "[32mPOST /select_role HTTP/1.1[0m" 302 -
+2025-06-05 00:48:09,018 - INFO - 127.0.0.1 - - [05/Jun/2025 00:48:09] "GET / HTTP/1.1" 200 -
+2025-06-05 00:48:09,115 - INFO - 127.0.0.1 - - [05/Jun/2025 00:48:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 00:48:09,120 - INFO - 127.0.0.1 - - [05/Jun/2025 00:48:09] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 00:56:13,556 - INFO - 127.0.0.1 - - [05/Jun/2025 00:56:13] "[32mPOST /logout HTTP/1.1[0m" 302 -
+2025-06-05 00:56:13,564 - INFO - 127.0.0.1 - - [05/Jun/2025 00:56:13] "GET / HTTP/1.1" 200 -
+2025-06-05 00:56:13,584 - INFO - 127.0.0.1 - - [05/Jun/2025 00:56:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 00:56:13,588 - INFO - 127.0.0.1 - - [05/Jun/2025 00:56:13] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 00:56:26,686 - INFO - 127.0.0.1 - - [05/Jun/2025 00:56:26] "[32mPOST /select_role HTTP/1.1[0m" 302 -
+2025-06-05 00:56:26,693 - INFO - 127.0.0.1 - - [05/Jun/2025 00:56:26] "GET / HTTP/1.1" 200 -
+2025-06-05 00:56:26,716 - INFO - 127.0.0.1 - - [05/Jun/2025 00:56:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 00:56:26,721 - INFO - 127.0.0.1 - - [05/Jun/2025 00:56:26] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 00:56:33,332 - INFO - 127.0.0.1 - - [05/Jun/2025 00:56:33] "GET / HTTP/1.1" 200 -
+2025-06-05 00:56:34,712 - INFO - 127.0.0.1 - - [05/Jun/2025 00:56:34] "[32mPOST /logout HTTP/1.1[0m" 302 -
+2025-06-05 00:56:34,720 - INFO - 127.0.0.1 - - [05/Jun/2025 00:56:34] "GET / HTTP/1.1" 200 -
+2025-06-05 00:56:34,739 - INFO - 127.0.0.1 - - [05/Jun/2025 00:56:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 00:56:34,743 - INFO - 127.0.0.1 - - [05/Jun/2025 00:56:34] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 01:18:40,770 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\app\\routes\\__init__.py', reloading
+2025-06-05 01:18:40,853 - INFO -  * Restarting with stat
+2025-06-05 01:18:41,490 - WARNING -  * Debugger is active!
+2025-06-05 01:18:41,494 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 01:20:56,125 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\app\\routes\\__init__.py', reloading
+2025-06-05 01:20:56,220 - INFO -  * Restarting with stat
+2025-06-05 01:20:56,793 - WARNING -  * Debugger is active!
+2025-06-05 01:20:56,796 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 01:21:57,551 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\app\\routes\\contract_routes.py', reloading
+2025-06-05 01:21:57,641 - INFO -  * Restarting with stat
+2025-06-05 01:21:58,225 - WARNING -  * Debugger is active!
+2025-06-05 01:21:58,229 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 01:22:26,564 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\app\\routes\\dashboard_routes.py', reloading
+2025-06-05 01:22:26,674 - INFO -  * Restarting with stat
+2025-06-05 01:22:27,358 - WARNING -  * Debugger is active!
+2025-06-05 01:22:27,363 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 01:24:18,608 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 01:24:18,608 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 01:24:18,609 - INFO -  * Restarting with stat
+2025-06-05 01:24:19,180 - WARNING -  * Debugger is active!
+2025-06-05 01:24:19,184 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 01:24:25,021 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:25] "GET / HTTP/1.1" 200 -
+2025-06-05 01:24:25,139 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:25] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 01:24:25,140 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:25] "GET /static/style.css HTTP/1.1" 200 -
+2025-06-05 01:24:26,771 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:26] "[32mPOST /select_role HTTP/1.1[0m" 302 -
+2025-06-05 01:24:26,777 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:26] "GET / HTTP/1.1" 200 -
+2025-06-05 01:24:26,801 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 01:24:26,805 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:26] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 01:24:32,894 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:32] "[32mPOST /logout HTTP/1.1[0m" 302 -
+2025-06-05 01:24:32,902 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:32] "GET / HTTP/1.1" 200 -
+2025-06-05 01:24:32,924 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 01:24:32,928 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:32] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 01:24:35,321 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:35] "[32mPOST /select_role HTTP/1.1[0m" 302 -
+2025-06-05 01:24:35,328 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:35] "GET / HTTP/1.1" 200 -
+2025-06-05 01:24:35,351 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 01:24:35,356 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:35] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 01:24:43,866 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:43] "[32mPOST /logout HTTP/1.1[0m" 302 -
+2025-06-05 01:24:43,873 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:43] "GET / HTTP/1.1" 200 -
+2025-06-05 01:24:43,896 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 01:24:43,899 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:43] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 01:24:51,579 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:51] "GET / HTTP/1.1" 200 -
+2025-06-05 01:24:51,599 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:51] "GET /static/style.css HTTP/1.1" 200 -
+2025-06-05 01:24:51,825 - INFO - 127.0.0.1 - - [05/Jun/2025 01:24:51] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 01:26:33,821 - INFO - 127.0.0.1 - - [05/Jun/2025 01:26:33] "[32mPOST /logout HTTP/1.1[0m" 302 -
+2025-06-05 01:26:33,828 - INFO - 127.0.0.1 - - [05/Jun/2025 01:26:33] "GET / HTTP/1.1" 200 -
+2025-06-05 01:26:34,073 - INFO - 127.0.0.1 - - [05/Jun/2025 01:26:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 01:26:34,151 - INFO - 127.0.0.1 - - [05/Jun/2025 01:26:34] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 01:26:39,078 - INFO - 127.0.0.1 - - [05/Jun/2025 01:26:39] "[32mPOST /select_role HTTP/1.1[0m" 302 -
+2025-06-05 01:26:39,084 - INFO - 127.0.0.1 - - [05/Jun/2025 01:26:39] "GET / HTTP/1.1" 200 -
+2025-06-05 01:26:39,329 - INFO - 127.0.0.1 - - [05/Jun/2025 01:26:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 01:26:39,410 - INFO - 127.0.0.1 - - [05/Jun/2025 01:26:39] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 01:26:41,346 - INFO - 127.0.0.1 - - [05/Jun/2025 01:26:41] "[32mPOST /logout HTTP/1.1[0m" 302 -
+2025-06-05 01:26:41,352 - INFO - 127.0.0.1 - - [05/Jun/2025 01:26:41] "GET / HTTP/1.1" 200 -
+2025-06-05 01:26:41,597 - INFO - 127.0.0.1 - - [05/Jun/2025 01:26:41] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-06-05 01:26:41,673 - INFO - 127.0.0.1 - - [05/Jun/2025 01:26:41] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-06-05 01:37:43,246 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\app\\routes\\contract_routes.py', reloading
+2025-06-05 01:37:43,351 - INFO -  * Restarting with stat
+2025-06-05 01:37:43,973 - WARNING -  * Debugger is active!
+2025-06-05 01:37:43,978 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 01:38:07,807 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\server.py', reloading
+2025-06-05 01:38:07,882 - INFO -  * Restarting with stat
+2025-06-05 01:38:45,574 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 01:38:45,574 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 01:38:45,576 - INFO -  * Restarting with stat
+2025-06-05 01:38:46,169 - WARNING -  * Debugger is active!
+2025-06-05 01:38:46,172 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 01:38:50,319 - INFO - 127.0.0.1 - - [05/Jun/2025 01:38:50] "GET /auth/register HTTP/1.1" 200 -
+2025-06-05 01:41:37,313 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\app\\routes\\dashboard_routes.py', reloading
+2025-06-05 01:41:37,427 - INFO -  * Restarting with stat
+2025-06-05 01:41:38,007 - WARNING -  * Debugger is active!
+2025-06-05 01:41:38,010 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 01:42:38,724 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\app\\routes\\dashboard_routes.py', reloading
+2025-06-05 01:42:38,842 - INFO -  * Restarting with stat
+2025-06-05 01:42:39,442 - WARNING -  * Debugger is active!
+2025-06-05 01:42:39,445 - INFO -  * Debugger PIN: 137-714-216

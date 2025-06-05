@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Contract</title>
+</head>
+<body>
+    <h1>Create New Contract</h1>
+
+    <form method="POST">
+        <label>Recipient Email:</label>
+        <input type="email" name="recipient_id" required>
+
+        <label>Contract Terms:</label>
+        <textarea name="terms" required></textarea>
+
+        <button type="submit">Submit Contract</button>
+    </form>
+
+    <a href="{{ url_for('dashboard.dashboard') }}">Back to Dashboard</a>
+</body>
+</html>

@@ -1,8 +1,8 @@
 from flask import Blueprint, render_template, request, session, redirect
 
-auth_bp = Blueprint('auth', __name__)
+auth_blueprint = Blueprint('auth', __name__)
 
-@auth_bp.route('/login', methods=['GET', 'POST'])
+@auth_blueprint.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         role = request.form.get('role')
