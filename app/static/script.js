@@ -9,6 +9,7 @@ document.getElementById("contract-form").addEventListener("submit", async functi
     body: JSON.stringify(data)
   });
 
+
   if (res.ok) {
     alert("Contract created!");
     location.reload();
@@ -16,6 +17,16 @@ document.getElementById("contract-form").addEventListener("submit", async functi
     alert("Error creating contract.");
   }
 });
+document.getElementById("create-contract-btn").addEventListener("click", function() {
+    window.location.href = "/create";
+})
+document.addEventListener("DOMContentLoaded", function() {
+    const loadingElement = document.getElementById("loading");
+    if (loadingElement) {
+        loadingElement.style.display = "block";
+    }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contract-form");
   const feedback = document.getElementById("feedback");
@@ -118,6 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Submit error:", err);
     feedback.textContent = "❌ Network or server error.";
   }
+
 });
 
 

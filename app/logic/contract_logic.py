@@ -2,11 +2,20 @@ import json
 import os
 import uuid
 import logging
+from datetime import datetime
+from enum import Enum
 
 # Directory for individual contract files
 CONTRACTS_FOLDER = "artifacts/contracts"
 
+class ContractStatus(Enum):
+    DRAFT = "draft"
+    APPROVED = "approved"
+    COMPLETED = "completed"
 
+class UserRole(Enum):
+    PARTY_A = "PartyA"
+    PARTY_B = "PartyB"
 
 logging.basicConfig(
     filename="contract_logs.log",
@@ -20,12 +29,14 @@ def create_contract(data):
         os.makedirs(CONTRACTS_FOLDER)
 
     contract_id = str(uuid.uuid4())
+
+
     contract = {
         "id": contract_id,
-        "initiator_id": data.get("initiator_id", "user@example.com"),
-        "for_party": data.get("for_party", "PartyB"),
+        "initiator_id": data.get("initiator_id"),
+        "recipient_email": data.get("recipient_email"),
         "terms": data.get("terms", ""),
-        "status": "draft"
+        "status": ContractStatus.DRAFT.value,
     }
 
     filepath = os.path.join(CONTRACTS_FOLDER, f"{contract_id}.json")
@@ -55,6 +66,18 @@ def get_contracts(current_user_email):
                     contracts.append(contract)
     return contracts
 
+def load_contract(contract_id):
+    filepath = os.path.join(CONTRACTS_FOLDER, f"{contract_id}.json")
+    if not os.path.exists(filepath):
+        return None
+    with open(filepath, "r") as f:
+        return json.load(f)
+def load_contract_file(contract_id):
+    filepath = os.path.join(CONTRACTS_FOLDER, f"{contract_id}.json")
+    if not os.path.exists(filepath):
+        return None
+    with open(filepath, "r") as f:
+        return json.load(f)
 
 # -------------------------------
 # Function: Validate contract text
@@ -70,30 +93,32 @@ def validate_contract(dad_text):
 # -------------------------------
 # Function: Add new contract
 # -------------------------------
-def add_contract(data):
+
+
+def add_contract(data, current_user_email):
     dad_text = data.get("dad_text", "")
     validate_contract(dad_text)
 
+    contract_id = str(uuid.uuid4())
     contract = {
-        "id": str(uuid.uuid4()),
-        "initiator_id": current_user.id,
-        "recipient_email": data.get("recipient_email", ""),  # or recipient_id
+        "id": contract_id,
+        "initiator_id": current_user_email,
+        "recipient_email": data.get("recipient_email", ""),
         "terms": data.get("terms", ""),
+        "dad_text": dad_text,
         "status": "draft",
         "approved_by_initiator": False,
         "approved_by_recipient": False,
         "created_at": datetime.utcnow().isoformat()
     }
-    return contract_id, contract
 
-    contract_id = str(uuid.uuid4())
     file_path = os.path.join(CONTRACTS_FOLDER, f"{contract_id}.json")
     with open(file_path, "w") as f:
         json.dump(contract, f, indent=2)
 
-    logger.info(f"Contract {contract_id} created by {contract['created_by']}")
-
+    logger.info(f"Contract {contract_id} created by {current_user_email}")
     return contract_id, contract
+
 
 
 def save_contract(contract_id, contract):
@@ -151,5 +176,18 @@ def complete_contract(contract_id):
 
     logger.info(f"Contract {contract_id} marked as completed.")
 
+
     return contract
+def archive_contract(contract_id):
+    src_path = os.path.join(CONTRACTS_FOLDER, f"{contract_id}.json")
+    dest_path = os.path.join(ARCHIVED_CONTRACTS_FOLDER, f"{contract_id}.json")
+
+    if not os.path.exists(src_path):
+        raise FileNotFoundError("Contract not found.")
+
+    if not os.path.exists(ARCHIVED_CONTRACTS_FOLDER):
+        os.makedirs(ARCHIVED_CONTRACTS_FOLDER)
+
+    shutil.move(src_path, dest_path)
+    logger.info(f"Contract {contract_id} archived successfully.")
 

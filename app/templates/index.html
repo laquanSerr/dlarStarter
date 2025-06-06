@@ -12,7 +12,12 @@
       {% for contract in sent %}
         <li>To: {{ contract.recipient_id }} — {{ contract.term[:30] }}...</li>
       {% else %}
-        <li>No sent contracts found.</li>
+        <div class="empty-state">
+        <p>You haven't sent any contracts yet.</p>
+        <button class="btn btn-primary">Create Contract</button>
+        </div>
+
+
       {% endfor %}
     </ul>
 
@@ -21,10 +26,31 @@
       {% for contract in received %}
         <li>From: {{ contract.initiator_id }} — {{ contract.term[:30] }}...</li>
       {% else %}
-        <li>No received contracts found.</li>
+        <div class="empty-state">
+        <p>No received contracts found.</p>
+        </div>
       {% endfor %}
     </ul>
 
+    <div class="contract-card">
+    <h3>Contract #123</h3>
+    <p>Status: <span class="badge bg-success">Approved</span></p>
+    </div>
+
+
     <a href="{{ url_for('contracts.create_contract') }}">Create Contract</a>
+    <script>
+        function showLoading() {
+            document.getElementById("loading").style.display = "block";
+        }
+    </script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+
+    <script>
+    fetch('/contracts')
+        .then(response => response.json())
+        .then(data => console.log(data));
+    </script>
+
 </body>
 </html>

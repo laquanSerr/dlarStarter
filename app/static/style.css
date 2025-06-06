@@ -45,3 +45,25 @@ li {
   padding: 10px;
   border-left: 5px solid #3498db;
 }
+.empty-state {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 50%;
+}
+.contract-card {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+#loading {
+    display: none;
+    font-size: 18px;
+    color: #007bff;
+    text-align: center;
+    margin-top: 20px;
+}

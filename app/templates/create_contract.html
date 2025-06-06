@@ -13,7 +13,8 @@
         <label>Contract Terms:</label>
         <textarea name="terms" required></textarea>
 
-        <button type="submit">Submit Contract</button>
+        <button class="btn btn-success" onclick="window.location.href='/create'">Create Contract</button>
+
     </form>
 
     <a href="{{ url_for('dashboard.dashboard') }}">Back to Dashboard</a>

@@ -715,3 +715,106 @@
 2025-06-05 04:47:37,448 - INFO - 127.0.0.1 - - [05/Jun/2025 04:47:37] "[33mGET /auth/login HTTP/1.1[0m" 404 -
 2025-06-05 04:47:48,298 - INFO - 127.0.0.1 - - [05/Jun/2025 04:47:48] "[32mGET /dashboard HTTP/1.1[0m" 302 -
 2025-06-05 04:47:48,305 - INFO - 127.0.0.1 - - [05/Jun/2025 04:47:48] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-06-05 05:13:59,601 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 05:13:59,601 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 05:13:59,603 - INFO -  * Restarting with stat
+2025-06-05 05:14:00,203 - WARNING -  * Debugger is active!
+2025-06-05 05:14:00,207 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 05:14:02,650 - INFO - 127.0.0.1 - - [05/Jun/2025 05:14:02] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-06-05 05:14:15,178 - INFO - 127.0.0.1 - - [05/Jun/2025 05:14:15] "[32mPOST /login?next=/dashboard HTTP/1.1[0m" 302 -
+2025-06-05 05:14:15,187 - INFO - 127.0.0.1 - - [05/Jun/2025 05:14:15] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-05 05:14:15,192 - INFO - 127.0.0.1 - - [05/Jun/2025 05:14:15] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-06-05 05:15:24,517 - INFO - 127.0.0.1 - - [05/Jun/2025 05:15:24] "GET /login HTTP/1.1" 200 -
+2025-06-05 05:15:38,889 - INFO - 127.0.0.1 - - [05/Jun/2025 05:15:38] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-05 05:15:38,898 - INFO - 127.0.0.1 - - [05/Jun/2025 05:15:38] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-05 05:15:38,904 - INFO - 127.0.0.1 - - [05/Jun/2025 05:15:38] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-06-05 05:15:58,689 - INFO - 127.0.0.1 - - [05/Jun/2025 05:15:58] "[32mPOST /login?next=/dashboard HTTP/1.1[0m" 302 -
+2025-06-05 05:15:58,700 - INFO - 127.0.0.1 - - [05/Jun/2025 05:15:58] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-05 05:15:58,706 - INFO - 127.0.0.1 - - [05/Jun/2025 05:15:58] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-06-05 05:16:12,308 - INFO - 127.0.0.1 - - [05/Jun/2025 05:16:12] "[32mPOST /login?next=/dashboard HTTP/1.1[0m" 302 -
+2025-06-05 05:16:12,317 - INFO - 127.0.0.1 - - [05/Jun/2025 05:16:12] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-05 05:16:12,324 - INFO - 127.0.0.1 - - [05/Jun/2025 05:16:12] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-06-05 05:16:48,813 - INFO - 127.0.0.1 - - [05/Jun/2025 05:16:48] "[33mGET /register HTTP/1.1[0m" 404 -
+2025-06-05 05:17:59,463 - INFO - 127.0.0.1 - - [05/Jun/2025 05:17:59] "[33mGET /register HTTP/1.1[0m" 404 -
+2025-06-05 16:56:37,619 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 16:56:37,619 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 16:56:37,623 - INFO -  * Restarting with stat
+2025-06-05 16:56:38,154 - WARNING -  * Debugger is active!
+2025-06-05 16:56:38,157 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 16:57:16,176 - INFO - 127.0.0.1 - - [05/Jun/2025 16:57:16] "GET / HTTP/1.1" 200 -
+2025-06-05 16:57:16,240 - INFO - 127.0.0.1 - - [05/Jun/2025 16:57:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-05 16:57:19,116 - INFO - 127.0.0.1 - - [05/Jun/2025 16:57:19] "[32mGET /create HTTP/1.1[0m" 302 -
+2025-06-05 16:57:19,123 - INFO - 127.0.0.1 - - [05/Jun/2025 16:57:19] "GET /login?next=/create HTTP/1.1" 200 -
+2025-06-05 16:57:33,213 - INFO - 127.0.0.1 - - [05/Jun/2025 16:57:33] "[32mPOST /login?next=/create HTTP/1.1[0m" 302 -
+2025-06-05 16:57:33,219 - INFO - 127.0.0.1 - - [05/Jun/2025 16:57:33] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-05 16:57:33,224 - INFO - 127.0.0.1 - - [05/Jun/2025 16:57:33] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-06-05 16:57:46,983 - INFO - 127.0.0.1 - - [05/Jun/2025 16:57:46] "[32mPOST /login?next=/dashboard HTTP/1.1[0m" 302 -
+2025-06-05 16:57:46,992 - INFO - 127.0.0.1 - - [05/Jun/2025 16:57:46] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-05 16:57:46,997 - INFO - 127.0.0.1 - - [05/Jun/2025 16:57:46] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-06-05 17:12:43,333 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\app\\logic\\contract_logic.py', reloading
+2025-06-05 17:12:43,444 - INFO -  * Restarting with stat
+2025-06-05 17:12:44,063 - WARNING -  * Debugger is active!
+2025-06-05 17:12:44,067 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 17:14:05,101 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\app\\logic\\contract_logic.py', reloading
+2025-06-05 17:14:05,224 - INFO -  * Restarting with stat
+2025-06-05 17:14:05,826 - WARNING -  * Debugger is active!
+2025-06-05 17:14:05,829 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 17:15:11,086 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\app\\logic\\contract_logic.py', reloading
+2025-06-05 17:15:11,204 - INFO -  * Restarting with stat
+2025-06-05 17:15:11,779 - WARNING -  * Debugger is active!
+2025-06-05 17:15:11,782 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 17:16:19,126 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\app\\logic\\contract_logic.py', reloading
+2025-06-05 17:16:19,252 - INFO -  * Restarting with stat
+2025-06-05 17:16:19,844 - WARNING -  * Debugger is active!
+2025-06-05 17:16:19,847 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 17:20:51,571 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 17:20:51,571 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 17:20:51,573 - INFO -  * Restarting with stat
+2025-06-05 17:20:52,162 - WARNING -  * Debugger is active!
+2025-06-05 17:20:52,165 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 17:20:56,272 - INFO - 127.0.0.1 - - [05/Jun/2025 17:20:56] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-06-05 17:20:58,407 - INFO - 127.0.0.1 - - [05/Jun/2025 17:20:58] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-06-05 17:21:06,364 - INFO - 127.0.0.1 - - [05/Jun/2025 17:21:06] "GET / HTTP/1.1" 200 -
+2025-06-05 17:21:10,730 - INFO - 127.0.0.1 - - [05/Jun/2025 17:21:10] "[32mGET /create HTTP/1.1[0m" 302 -
+2025-06-05 17:21:10,737 - INFO - 127.0.0.1 - - [05/Jun/2025 17:21:10] "GET /login?next=/create HTTP/1.1" 200 -
+2025-06-05 17:21:30,843 - INFO - 127.0.0.1 - - [05/Jun/2025 17:21:30] "[33mGET /register HTTP/1.1[0m" 404 -
+2025-06-05 17:21:40,810 - INFO - 127.0.0.1 - - [05/Jun/2025 17:21:40] "[32mGET /create HTTP/1.1[0m" 302 -
+2025-06-05 17:21:40,817 - INFO - 127.0.0.1 - - [05/Jun/2025 17:21:40] "GET /login?next=/create HTTP/1.1" 200 -
+2025-06-05 17:25:25,695 - INFO - 127.0.0.1 - - [05/Jun/2025 17:25:25] "GET / HTTP/1.1" 200 -
+2025-06-05 17:26:49,670 - INFO - 127.0.0.1 - - [05/Jun/2025 17:26:49] "[32mGET /create HTTP/1.1[0m" 302 -
+2025-06-05 17:26:49,677 - INFO - 127.0.0.1 - - [05/Jun/2025 17:26:49] "GET /login?next=/create HTTP/1.1" 200 -
+2025-06-05 17:28:01,974 - INFO - 127.0.0.1 - - [05/Jun/2025 17:28:01] "[32mPOST /login?next=/create HTTP/1.1[0m" 302 -
+2025-06-05 17:28:01,982 - INFO - 127.0.0.1 - - [05/Jun/2025 17:28:01] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-05 17:28:01,988 - INFO - 127.0.0.1 - - [05/Jun/2025 17:28:01] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-06-05 21:07:42,909 - INFO -  * Detected change in 'C:\\Users\\adatt\\PycharmProjects\\Dlar2.0\\dlarStarter\\server.py', reloading
+2025-06-05 21:07:43,002 - INFO -  * Restarting with stat
+2025-06-05 21:07:43,725 - WARNING -  * Debugger is active!
+2025-06-05 21:07:43,728 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 21:35:48,097 - INFO - 127.0.0.1 - - [05/Jun/2025 21:35:48] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-06-05 21:35:49,948 - INFO - 127.0.0.1 - - [05/Jun/2025 21:35:49] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-06-05 21:35:59,366 - INFO - 127.0.0.1 - - [05/Jun/2025 21:35:59] "GET / HTTP/1.1" 200 -
+2025-06-05 21:35:59,395 - INFO - 127.0.0.1 - - [05/Jun/2025 21:35:59] "[32mGET /contracts HTTP/1.1[0m" 302 -
+2025-06-05 21:35:59,415 - INFO - 127.0.0.1 - - [05/Jun/2025 21:35:59] "GET /login?next=/contracts HTTP/1.1" 200 -
+2025-06-05 21:36:30,226 - INFO - 127.0.0.1 - - [05/Jun/2025 21:36:30] "[32mGET /create HTTP/1.1[0m" 302 -
+2025-06-05 21:36:30,232 - INFO - 127.0.0.1 - - [05/Jun/2025 21:36:30] "GET /login?next=/create HTTP/1.1" 200 -
+2025-06-05 21:36:33,696 - INFO - 127.0.0.1 - - [05/Jun/2025 21:36:33] "GET / HTTP/1.1" 200 -
+2025-06-05 21:36:33,723 - INFO - 127.0.0.1 - - [05/Jun/2025 21:36:33] "[32mGET /contracts HTTP/1.1[0m" 302 -
+2025-06-05 21:36:33,732 - INFO - 127.0.0.1 - - [05/Jun/2025 21:36:33] "GET /login?next=/contracts HTTP/1.1" 200 -
+2025-06-05 21:45:10,773 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-05 21:45:10,773 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 21:45:10,775 - INFO -  * Restarting with stat
+2025-06-05 21:45:11,344 - WARNING -  * Debugger is active!
+2025-06-05 21:45:11,347 - INFO -  * Debugger PIN: 137-714-216
+2025-06-05 21:45:15,921 - INFO - 127.0.0.1 - - [05/Jun/2025 21:45:15] "GET / HTTP/1.1" 200 -
+2025-06-05 21:45:15,940 - INFO - 127.0.0.1 - - [05/Jun/2025 21:45:15] "[33mGET /static/main.js HTTP/1.1[0m" 404 -
+2025-06-05 21:45:15,949 - INFO - 127.0.0.1 - - [05/Jun/2025 21:45:15] "[32mGET /contracts HTTP/1.1[0m" 302 -
+2025-06-05 21:45:15,956 - INFO - 127.0.0.1 - - [05/Jun/2025 21:45:15] "GET /login?next=/contracts HTTP/1.1" 200 -
+2025-06-05 21:45:18,291 - INFO - 127.0.0.1 - - [05/Jun/2025 21:45:18] "GET / HTTP/1.1" 200 -
+2025-06-05 21:45:18,312 - INFO - 127.0.0.1 - - [05/Jun/2025 21:45:18] "[33mGET /static/main.js HTTP/1.1[0m" 404 -
+2025-06-05 21:45:18,323 - INFO - 127.0.0.1 - - [05/Jun/2025 21:45:18] "[32mGET /contracts HTTP/1.1[0m" 302 -
+2025-06-05 21:45:18,332 - INFO - 127.0.0.1 - - [05/Jun/2025 21:45:18] "GET /login?next=/contracts HTTP/1.1" 200 -
+2025-06-05 21:45:20,100 - INFO - 127.0.0.1 - - [05/Jun/2025 21:45:20] "GET /login?next=/create HTTP/1.1" 200 -
